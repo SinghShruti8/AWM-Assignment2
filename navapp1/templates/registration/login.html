@@ -1,0 +1,20 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="topnav">
+        <a class="active" href="{% url 'index' %}">Home</a>
+        <a href={% url 'maps' %}>Map</a>
+        <a href={% url 'login' %}>Login</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+    </div>
+</head>
+<body>
+<h3> Login </h3>
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" name="Login">
+</form>
+</body>
+</html>
